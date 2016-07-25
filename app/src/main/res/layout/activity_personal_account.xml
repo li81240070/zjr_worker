@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/toolbar_view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/personal_account_bg"
+            />
+
+        <Button
+            android:id="@+id/personalWithdraw_btn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="@string/personal_withdraw"
+            android:textSize="18sp"
+            android:textColor="@color/primary_color"
+            android:background="@drawable/shape_personal_btn_bg"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/personal_money"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_alignTop="@+id/personalWithdraw_btn"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:id="@+id/personalAmount_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:layout_alignBottom="@+id/personalWithdraw_btn"
+            android:layout_marginLeft="20dp"
+            />
+    </RelativeLayout>
+
+
+    <com.hengxun.builder.view.widget.SwipeRefreshLoadingLayout
+        android:id="@+id/personalCountRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/personal_Rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+    </com.hengxun.builder.view.widget.SwipeRefreshLoadingLayout>
+
+</LinearLayout>

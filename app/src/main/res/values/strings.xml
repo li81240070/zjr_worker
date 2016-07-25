@@ -1,0 +1,149 @@
+<resources>
+    <string name="app_name">真匠人</string>
+    <string name="map_activity">订单地图</string>
+
+    <!-- 登录 -->
+    <string name="login">登录</string>
+    <string name="login_psw">密码</string>
+    <string name="login_number">工号</string>
+    <string name="login_remember_psw">记住密码</string>
+    <string name="login_reset_psw">忘记密码？</string>
+
+    <!-- 忘记密码 -->
+    <string name="forgrt_psw">忘记密码</string>
+    <string name="forget_input_phone_number">请输入你的手机号</string>
+    <string name="forget_check_code">校验码</string>
+    <string name="forget_obtain_check_code">获取验证码</string>
+    <string name="forget_phone_number_wrong">请输入正确手机号</string>
+    <string name="forget_check_code_wrong">请输入正确验证码!</string>
+    <string name="forget_next_step_btn">下一步</string>
+    <string name="forget_not_found_phone">找不到手机号</string>
+    <!--<string name="forget_obtain_check_code">39秒后重发</string>-->
+
+    <!-- 主页 开工页面 -->
+    <string name="home_start_work">开工</string>
+    <string name="home_finish_work">收工</string>
+    <string name="home_ready_finish">确定要收工吗</string>
+    <string name="home_sure">确定</string>
+    <string name="home_cancel">取消</string>
+    <string name="home_orders">本月完成订单数</string>
+
+    <!-- 地图页面 -->
+    <string name="map_order">订单地图</string>
+    <string name="map_hot">热点地图</string>
+    <string name="map_dialog_title">请先开工，开工后才可以抢单</string>
+
+    <!-- 我的订单 -->
+    <string name="mine_order">我的订单</string>
+    <string name="mine_all_order">全部</string>
+    <string name="mine_appointment_order">预约中</string>
+    <string name="mine_doing_order">进行中</string>
+    <string name="mine_no_pay_order">未付款</string>
+    <string name="mine_compelete_order">已完成</string>
+
+    <!-- 我的信息 -->
+    <string name="my_info">我的</string>
+    <string name="my_order_number">订单数</string>
+    <string name="my_orders">我的订单</string>
+    <string name="my_bill">我的账单</string>
+    <string name="my_marks">我的积分</string>
+    <string name="my_account_safety">账号与安全</string>
+
+    <!-- 个人信息 -->
+    <string name="person_info">个人信息</string>
+    <string name="person_exit_login">退出登录</string>
+    <string name="person_header">头像</string>
+    <string name="person_name">姓名</string>
+    <string name="person_gender">性别</string>
+    <string name="person_phone_number">手机号</string>
+    <string name="person_type">工作类别</string>
+    <string name="person_account_safety">账号与安全</string>
+    <string name="person_change_psw">修改密码</string>
+
+    <!-- 订单详情 -->
+    <string name="order_details">订单详情</string>
+    <string name="order_contect_shop">联系用户</string>
+    <string name="order_location">开始定位</string>
+    <string name="order_change_price">更改</string>
+    <string name="order_appoint_time">预约时间: </string>
+
+    <!-- 付款页面 -->
+    <string name="pay_money">付款</string>
+    <string name="pay_al">支付宝</string>
+    <string name="pay_wx">微信</string>
+    <string name="pay_account_money">余额</string>
+
+    <!-- 提现页面 -->
+    <string name="withdraw">提现</string>
+    <string name="withdraw_username">持卡人</string>
+    <string name="withdraw_money_number">提现金额</string>
+    <string name="withdraw_card_number">卡号</string>
+    <string name="withdraw_bank">银行</string>
+    <string name="withdraw_bank_start">开户行</string>
+    <string name="withdraw_bank_hint">请输入银行</string>
+    <string name="withdraw_bank_account">请输入持卡人姓名</string>
+    <string name="withdraw_banknum_hint">请输入银行卡号</string>
+    <string name="withdraw_bank_start_hint">请输入开户行</string>
+    <string name="withdraw_notice">请输入您的姓名和卡号</string>
+    <string name="withdraw_bank_notice">不知道开户行？ 请拨打银行卡上的银行客服电话咨询</string>
+
+    <!-- 提现详情 -->
+    <string name="withdraw_details">提现详情</string>
+    <string name="withdraw_details_apply">提现申请已提交</string>
+    <string name="withdraw_details_card">储蓄卡</string>
+    <string name="withdraw_details_money">提现金额</string>
+    <string name="withdraw_details_complete">完成</string>
+
+    <!-- 忘记密码(重设) -->
+    <string name="reset_psw">修改密码</string>
+    <string name="reset_input_old_psw">请输入旧密码</string>
+    <string name="reset_input_new_psw">请输入新密码</string>
+    <string name="reset_input_new_psw_anain">请再次输入新密码</string>
+    <string name="reset_input_new_error">您两次密码输入不一致..</string>
+    <string name="reset_input_sure">确认</string>
+    <string name="reset_input_success">修改密码成功，请重新登录</string>
+    <string name="modify_old_psw_wrong">密码错误</string>
+
+    <!-- 忘记密码（修改完成） -->
+    <string name="reset_complete">忘记密码</string>
+    <string name="reset_sure">确定</string>
+    <string name="reset_psw_complete">密码修改成功</string>
+
+    <!-- 我的积分 -->
+    <string name="my_mark">我的积分</string>
+    <string name="my_all_mark">总积分</string>
+
+    <!-- 个人账户 -->
+    <string name="personal_account">个人账户</string>
+    <string name="personal_money">账户余额（元）</string>
+    <string name="personal_withdraw">提现</string>
+
+    <!-- 上传照片 -->
+    <string name="commit_picture">上传照片</string>
+    <string name="commit">上传照片</string>
+    <string name="commit_long_press">长按可删除照片</string>
+
+    <!-- 账户与安全 -->
+    <string name="account_and_safe">账户与安全</string>
+    <string name="account_change_psw">修改密码</string>
+    <string name="account_change_withdraw_psw">修改提现密码</string>
+
+    <!-- 订单状态 -->
+    <string name="order_appointment">已预约</string>
+    <string name="order_appointing">预约中</string>
+    <string name="order_debate">协商中</string>
+    <string name="order_ongoing">已开工</string>
+    <string name="order_complete">已完成</string>
+    <string name="order_wait_for_payment">待付款</string>
+    <string name="order_cancel">已取消</string>
+    <string name="order_paid">已付款</string>
+    <string name="order_not_pay">已完工</string>
+    <string name="order_evaluation">已评价</string>
+
+    <!-- 提示信息 -->
+    <string name="dialog_token_unable">此账号已在别处登录</string>
+    <string name="dialog_modify_price">请输入价格, 不得低于原始价格</string>
+    <string name="toast_apply_complete">申请提现成功</string>
+
+
+</resources>

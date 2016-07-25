@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/withdraw_details_bg"
+    >
+
+    <include
+        layout="@layout/toolbar_view"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:src="@mipmap/withdraw_details"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/withdraw_details_img_margin"
+        android:layout_marginBottom="@dimen/withdraw_details_img_margin_buttom"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/withdraw_details_apply"
+        android:textSize="23sp"
+        android:textColor="@color/withdraw_details_tv"
+        android:layout_gravity="center"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/withdraw_details_rl_margin"
+        >
+
+        <TextView
+            android:id="@+id/withdrawCard_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/withdraw_details_card"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/withdraw_details_money"
+            android:layout_below="@+id/withdrawCard_tv"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/withdraw_complete_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_withdraw_btn_bg"
+        android:layout_marginTop="@dimen/withdraw_details_btn_margin"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/withdraw_btn_size"
+        android:text="@string/withdraw_details_complete"
+        />
+
+</LinearLayout>

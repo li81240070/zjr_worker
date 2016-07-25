@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/withdraw_bg"
+    >
+
+    <include layout="@layout/toolbar_view" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/withdraw_tv_notice_margin"
+        android:text="@string/withdraw_notice"
+        android:textSize="@dimen/withdraw_tv_notice_margin" />
+
+    <LinearLayout style="@style/withdraw_Ll">
+
+        <TextView
+            style="@style/withdraw_Tv"
+            android:text="@string/withdraw_username"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
+
+        <EditText
+            android:id="@+id/withdrawName_Et"
+            style="@style/withdraw_Et"
+            android:hint="请输入持卡人姓名"
+            android:maxLength="10"
+            android:inputType="textPersonName"
+            />
+
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dp"
+        android:background="@color/material_grey_400"
+        />
+
+    <LinearLayout style="@style/withdraw_Ll">
+
+        <TextView
+            style="@style/withdraw_Tv"
+            android:text="@string/withdraw_card_number"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
+
+        <EditText
+            android:id="@+id/withdrawNumber_Et"
+            style="@style/withdraw_Et"
+            android:hint="请输入银行卡号"
+            android:inputType="number"
+            android:maxLength="20"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dp"
+        android:background="@color/material_grey_400"
+        />
+
+    <LinearLayout style="@style/withdraw_Ll">
+
+        <TextView
+            style="@style/withdraw_Tv"
+            android:text="@string/withdraw_bank"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
+
+        <EditText
+            android:id="@+id/withdrawBank_Et"
+            style="@style/withdraw_Et"
+            android:hint="@string/withdraw_bank_hint"
+            android:maxLength="20"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dp"
+        android:background="@color/material_grey_400"
+        />
+
+    <LinearLayout style="@style/withdraw_Ll">
+
+        <TextView
+            style="@style/withdraw_Tv"
+            android:text="@string/withdraw_bank_start"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
+
+        <EditText
+            android:id="@+id/withdrawBankStart_Et"
+            style="@style/withdraw_Et"
+            android:hint="@string/withdraw_bank_start_hint"
+            android:maxLength="50"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/withdraw_bank_notice"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/person_btn"
+        android:textSize="12sp"
+        android:layout_marginTop="3dp"
+        />
+
+    <LinearLayout style="@style/withdraw_Ll"
+        android:layout_marginTop="@dimen/withdraw_ll_margin_top"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+
+        <TextView
+            style="@style/withdraw_Tv"
+            android:text="@string/withdraw_money_number"
+            />
+
+        <TextView
+            android:id="@+id/withdrawNumber_Tv"
+            style="@style/withdraw_Et"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+    <Button
+        android:id="@+id/withdraw_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/withdraw"
+        android:background="@drawable/shape_withdraw_btn_bg"
+        android:textColor="@color/white"
+        android:textSize="@dimen/withdraw_btn_size"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        />
+    </RelativeLayout>
+
+
+</LinearLayout>

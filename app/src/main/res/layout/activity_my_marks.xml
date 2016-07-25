@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/myMarks_tb"
+        layout="@layout/toolbar_view" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_marks_img"
+        android:layout_below="@+id/myMarks_tb"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/my_marks_bg" />
+
+    <RelativeLayout
+        android:id="@+id/myMarks_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_marks_img"
+        android:layout_below="@+id/myMarks_tb">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/my_all_marks_margin"
+            android:text="@string/my_all_mark"
+            android:textColor="@color/white"
+            android:textSize="@dimen/my_all_marks_size" />
+
+        <TextView
+            android:id="@+id/myMarks_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/my_all_marks_margin"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/my_marks_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <com.hengxun.builder.view.widget.SwipeRefreshLoadingLayout
+        android:id="@+id/marks_Sl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/myMarks_Rl">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/marks_RV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.hengxun.builder.view.widget.SwipeRefreshLoadingLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    >
+
+    <TextView
+        android:id="@+id/marksType_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收到维修费"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_margin="15dp"
+        />
+
+    <TextView
+        android:id="@+id/marksTime_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2016-3-29"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/marksType_Tv"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="15dp"
+        />
+
+    <TextView
+        android:id="@+id/marksPoint_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:textSize="40sp"
+        android:text="0"
+        android:textColor="@color/primary_color"
+        android:layout_marginRight="15dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

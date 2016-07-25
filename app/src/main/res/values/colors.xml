@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_color">#47a2ff</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="toolbar_title">#666666</color>
+    <color name="primary_bg">#f0f0f0</color>
+    <color name="img_btn_bg">#00000000</color>
+    <color name="line">#a0a0a0</color>
+    <color name="line_ano">#f0f0f0</color>
+
+    <!-- 登录 -->
+    <color name="login_et">#cacad0</color>
+    <color name="login_btn_bg">#47a2ff</color>
+    <color name="login_reset_psw_tv">#47a2ff</color>
+
+    <!-- 忘记密码 -->
+    <color name="forget_checkCode_tv">#333333</color>
+    <color name="forget_lines">#e5e5e5</color>
+    <color name="forget_tv_lines">#bababa</color>
+
+    <!-- 首页 -->
+    <color name="home_lines">#e4e4e4</color>
+    <color name="home_ready_finish">#333333</color>
+    <color name="home_tv_sure">#5bb646</color>
+    <color name="home_tv_cancel">#d73749</color>
+    <color name="home_dialog_bg">#88000000</color>
+    <color name="home_dialog_rl_bg">#47a2ff</color>
+
+    <!-- 我的订单 -->
+    <color name="mine_toolbar">#47a2ff</color>
+
+    <!-- 个人信息 -->
+    <color name="person_tv">#666666</color>
+    <color name="person_content_tv">#999999</color>
+    <color name="person_btn">#ff3636</color>
+    <color name="person_lines">#d2d2d2</color>
+    <color name="person_Rl">#f2f2f2</color>
+    <color name="person_tag_tv">#ff8903</color>
+    
+    <!-- 我的信息 -->
+    <color name="my_name_tv">#000</color>
+    <color name="my_order_ll">#c0c0c0</color>
+    <color name="my_orders_tv">#5bb646</color>
+    <color name="my_bill_tv">#47a2ff</color>
+    <color name="my_mark_tv">#47a2ff</color>
+
+    <!-- 订单详情 -->
+    <color name="order_lines">#c9c9c9</color>
+    <color name="order__tv_location">#999999</color>
+    <color name="order_bg">#d0d0d0</color>
+    <color name="order_commit_picture">#47a2ff</color>
+
+    <!-- 付款页面 -->
+    <color name="pay_tb">#47a2ff</color>
+    <color name="pay_tv">#000</color>
+    <color name="pay_lines">#a0a0a0</color>
+
+    <!-- 提现页面 -->
+    <color name="withdraw_bg">#f0f0f0</color>
+    <color name="withdraw_btn_bg">#47a2ff</color>
+
+    <!-- 提现详情 -->
+    <color name="withdraw_details_bg">#f0f0f0</color>
+    <color name="withdraw_details_tv">#333333</color>
+
+    <!-- 我的积分 -->
+    <color name="my_marks_tv">#47a2ff</color>
+
+    <!--&lt;!&ndash; 我的订单 &ndash;&gt;-->
+    <!--<color name="mine_line">#a0a0a0</color>-->
+
+    <!-- 底部弹窗 -->
+    <color name="material_white">#ffffff</color>
+    <color name="material_grey_400">#bdbdbd</color>
+
+</resources>

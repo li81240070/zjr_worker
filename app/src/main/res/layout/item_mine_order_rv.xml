@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/enter"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@mipmap/narrow_right" />-->
+
+        <TextView
+            android:id="@+id/orderDate_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1月1日  0点0分" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/orderTime_Tv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignTop="@+id/orderDate_Tv"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_toRightOf="@+id/orderDate_Tv"-->
+            <!--android:text="0点0分" />-->
+
+        <TextView
+            android:id="@+id/orderType_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderDate_Tv"
+            android:layout_marginTop="10dp"
+            android:text="水龙头" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/orderDetails_Tv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignTop="@+id/orderType_Tv"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_toRightOf="@+id/orderType_Tv"-->
+            <!--android:text="单水更换" />-->
+
+        <TextView
+            android:id="@+id/orderAddress_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/orderType_Tv"
+            android:layout_marginTop="10dp"
+            android:text="大连市高新园区"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/orderState_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="未完成" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line_ano" />
+
+</RelativeLayout>

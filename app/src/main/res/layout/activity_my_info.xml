@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/my_order_bg">
+
+    <include
+        android:id="@+id/my_toolbar"
+        layout="@layout/toolbar_view" />
+
+    <com.hengxun.builder.view.widget.CircleImage
+        android:id="@+id/myHead_Iv"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/my_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/default_head"
+        />
+
+    <TextView
+        android:id="@+id/myName_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myHead_Iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/my_name_tv"
+        android:textSize="@dimen/my_name_tv" />
+
+    <RatingBar
+        android:id="@+id/my_Rb"
+        style="@style/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myName_Tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:numStars="5"
+        android:isIndicator="true"
+        />
+    <!--style="@style/ratingBar"-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/myTag_Rv"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/my_Rb"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:foregroundGravity="center"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/myOrderNumber_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myTag_Rv"
+        android:layout_marginLeft="10dp"
+        android:text="订单数 : 0"
+        android:textSize="18sp" />
+
+    <ProgressBar
+        android:id="@+id/myMark_Pb"
+        style="@style/my_mark_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/myOrderNumber_Tv"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/myGift_Rv"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/myOrderNumber_Tv"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        />
+
+    <RelativeLayout
+        android:id="@+id/myGift_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myOrderNumber_Tv"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/myOrder_Rl"
+        style="@style/my_Order_Rl"
+        android:layout_below="@+id/myGift_Rv">
+
+        <TextView
+            style="@style/my_Order_Tv"
+            android:text="@string/my_orders" />
+
+        <ImageView
+            android:id="@+id/my_orders_Iv"
+            style="@style/my_Order_Iv" />
+
+        <TextView
+            android:id="@+id/my_orders_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:text="0"
+            />
+            <!--android:textColor="@color/my_orders_tv"-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/myBill_Rl"
+        style="@style/my_Order_Rl"
+        android:layout_below="@+id/myOrder_Rl">
+
+        <TextView
+            style="@style/my_Order_Tv"
+            android:text="@string/my_bill" />
+
+        <ImageView style="@style/my_Order_Iv" />
+
+        <TextView
+            android:id="@+id/myAccount_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:text="¥ 0"
+            />
+            <!--android:textColor="@color/my_bill_tv" -->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/myMarks_Rl"
+        style="@style/my_Order_Rl"
+        android:layout_below="@+id/myBill_Rl">
+
+        <TextView
+            style="@style/my_Order_Tv"
+            android:text="@string/my_marks" />
+
+        <ImageView style="@style/my_Order_Iv" />
+
+        <TextView
+            android:id="@+id/myMarks_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:text="0"
+            />
+            <!--android:textColor="@color/my_mark_tv" -->
+
+    </RelativeLayout>
+
+</RelativeLayout>

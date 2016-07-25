@@ -1,0 +1,87 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="lines">1dp</dimen>
+    <dimen name="toolbar_right_tv_mar">10dp</dimen>
+
+    <!-- 登录 -->
+    <dimen name="login_btn_margin">50dp</dimen>
+    <dimen name="login_btn_margin_top">10dp</dimen>
+    <dimen name="login_btn_textsize">17sp</dimen>
+    <dimen name="login_tv_textsize">16sp</dimen>
+    <dimen name="login_tv_title">40sp</dimen>
+    <dimen name="login_checkbox_margin">47dp</dimen>
+
+    <!-- 忘记密码 -->
+    <dimen name="forget_et_margin_left">10dp</dimen>
+    <dimen name="forget_tv_padding">5dp</dimen>
+
+    <!-- 主页 开工页面 -->
+    <dimen name="home_btn_start_work">30sp</dimen>
+    <dimen name="home_view_margin_top">12dp</dimen>
+    <dimen name="home_img_margin">10dp</dimen>
+    <dimen name="home_tv_ready_finish">21sp</dimen>
+
+    <!-- 个人信息 -->
+    <dimen name="person_tv_size">17sp</dimen>
+    <dimen name="person_tv_margin">15dp</dimen>
+    <dimen name="person_Iv_margin">15dp</dimen>
+    <dimen name="person_Btn_margin_left">60dp</dimen>
+    <dimen name="person_Btn_margin_top">55dp</dimen>
+    <dimen name="person_Btn_text_size">19sp</dimen>
+    <dimen name="person_lines_margin_left">15dp</dimen>
+    <dimen name="person_account_margin_top">15dp</dimen>
+
+    <!-- 我的信息 -->
+    <dimen name="my_name_tv">16sp</dimen>
+    <dimen name="my_orders_Rl">45dp</dimen>
+    <!--<dimen name="">50dp</dimen>-->
+    <!--<dimen name="">50dp</dimen>-->
+    <!--<dimen name="">50dp</dimen>-->
+
+    <!-- 订单详情 -->
+    <dimen name="order_tv_location">18sp</dimen>
+    <dimen name="order_lines_margin_top">30dp</dimen>
+    <dimen name="order_iv_margin_right">10dp</dimen>
+    <dimen name="order_change_btn_width">50dp</dimen>
+    <dimen name="order_change_btn_height">20dp</dimen>
+    <dimen name="order_change_btn_text">14sp</dimen>
+    <dimen name="order_price_tv_margin">60dp</dimen>
+    <dimen name="order_price_tv">16sp</dimen>
+
+    <!-- 付款页面 -->
+    <dimen name="pay_tv_size">18sp</dimen>
+    <dimen name="pay_tv_drawable_pad">25dp</dimen>
+    <dimen name="pay_tv_pad">10dp</dimen>
+    <dimen name="pay_line_margin_top">5dp</dimen>
+    <dimen name="pay_lines_height">0.5dp</dimen>
+
+    <!-- 提现页面 -->
+    <dimen name="withdraw_tv_notice_margin">17dp</dimen>
+    <dimen name="withdraw_tv_size">17sp</dimen>
+    <dimen name="withdraw_btn_margin_top">100dp</dimen>
+    <dimen name="withdraw_btn_size">20sp</dimen>
+    <dimen name="withdraw_ll_margin_top">40dp</dimen>
+
+
+    <!-- 提现详情 -->
+    <dimen name="withdraw_details_img_margin">45dp</dimen>
+    <dimen name="withdraw_details_img_margin_buttom">25dp</dimen>
+    <dimen name="withdraw_details_btn_margin">40dp</dimen>
+    <dimen name="withdraw_details_rl_margin">15dp</dimen>
+    <!--<dimen name="withdraw_details"></dimen>-->
+    <!--<dimen name="withdraw_details"></dimen>-->
+
+
+    <!-- 我的积分 -->
+    <dimen name="my_marks_img">130dp</dimen>
+    <dimen name="my_all_marks_size">25sp</dimen>
+    <dimen name="my_all_marks_margin">20dp</dimen>
+    <dimen name="my_marks_size">50sp</dimen>
+
+
+
+
+</resources>

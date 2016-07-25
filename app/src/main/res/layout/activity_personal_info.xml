@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--android:background="@color/person_Rl"-->
+
+    <include layout="@layout/toolbar_view" />
+
+    <View style="@style/person_line"/>
+
+    <RelativeLayout style="@style/person_Rl"
+        >
+
+        <TextView
+            style="@style/person_Tv"
+            android:text="@string/person_header" />
+
+        <com.hengxun.builder.view.widget.CircleImage
+            android:id="@+id/personAvater_Iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:src="@mipmap/default_head" />
+    </RelativeLayout>
+
+    <View style="@style/person_line" />
+
+    <RelativeLayout style="@style/person_Rl">
+
+        <TextView
+            style="@style/person_Tv"
+            android:text="@string/person_name" />
+
+        <TextView
+            android:id="@+id/personName_Tv"
+            style="@style/personValue_Tv" />
+    </RelativeLayout>
+
+    <View style="@style/person_line" />
+
+    <RelativeLayout style="@style/person_Rl">
+
+        <TextView
+            style="@style/person_Tv"
+            android:text="@string/person_gender" />
+
+        <TextView
+            android:id="@+id/personSex_Tv"
+            style="@style/personValue_Tv" />
+    </RelativeLayout>
+
+    <View style="@style/person_line" />
+
+    <RelativeLayout style="@style/person_Rl">
+
+        <TextView
+            style="@style/person_Tv"
+            android:text="@string/person_phone_number" />
+
+        <TextView
+            android:id="@+id/personMobile_Tv"
+            style="@style/personValue_Tv" />
+
+    </RelativeLayout>
+
+    <View style="@style/person_line" />
+
+    <RelativeLayout style="@style/person_Rl"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        >
+
+        <TextView
+            style="@style/person_Tv"
+            android:text="@string/person_type" />
+
+        <TextView
+            android:id="@+id/personType_Tv"
+            style="@style/personValue_Tv"
+            android:layout_width="155dp"
+            android:gravity="right"
+            android:maxLines="2"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/personPsw_Rl"
+        style="@style/person_Rl"
+        android:layout_marginTop="@dimen/person_account_margin_top">
+
+        <TextView
+            style="@style/person_Tv"
+            android:text="@string/person_change_psw" />
+
+        <TextView
+            style="@style/personValue_Tv"
+            android:src="@mipmap/home_blue_round" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3">
+
+        <Button
+            android:id="@+id/exitLogin_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/person_Btn_margin_top"
+            android:layout_marginLeft="@dimen/person_Btn_margin_left"
+            android:layout_marginRight="@dimen/person_Btn_margin_left"
+            android:layout_marginTop="@dimen/person_Btn_margin_top"
+            android:background="@drawable/shape_person_btn_bg"
+            android:text="@string/person_exit_login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/person_Btn_text_size" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

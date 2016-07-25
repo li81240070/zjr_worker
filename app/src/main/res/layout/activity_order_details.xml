@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_view" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/orderType_Iv"
+            style="@style/order_img"
+            android:src="@mipmap/order_type"
+            />
+
+        <TextView
+            android:id="@+id/orderType_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_color"
+            android:textSize="17sp"
+            android:layout_alignTop="@+id/orderType_Iv"
+            android:layout_toRightOf="@+id/orderType_Iv"
+            android:layout_marginLeft="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/orderAddress_Iv"
+            style="@style/order_img"
+            android:src="@mipmap/order_address"
+            android:layout_below="@+id/orderType_Iv"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/orderAddress_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_alignTop="@+id/orderAddress_Iv"
+            android:layout_toRightOf="@+id/orderAddress_Iv"
+            android:layout_marginLeft="10dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/orderAddPhoto_Rv"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/orderAddress_Tv"
+            android:layout_toRightOf="@+id/orderPhotos_Iv"
+            android:layout_alignTop="@+id/orderPhotos_Iv"
+            />
+
+        <ImageView
+            android:id="@+id/orderPhotos_Iv"
+            style="@style/order_img"
+            android:src="@mipmap/order_photos"
+            android:layout_below="@+id/orderAddress_Iv"
+            android:layout_marginTop="30dp"
+            />
+
+        <ImageView
+            android:id="@+id/orderMessages_Iv"
+            style="@style/order_img"
+            android:layout_below="@+id/orderAddress_Iv"
+            android:src="@mipmap/order_messages"
+            android:layout_marginTop="140dp"
+            />
+
+        <TextView
+            android:id="@+id/orderMessages_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_alignLeft="@+id/orderAddress_Tv"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:layout_alignTop="@+id/orderMessages_Iv"
+            />
+
+        <TextView
+            android:id="@+id/appointment_title_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/appointment_Tv"
+            android:text="@string/order_appoint_time"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/appointment_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/appointment_title_Tv"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/orderPrice_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥ 0"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/order_price_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/order_price_tv_margin"
+            />
+
+        <Button
+            android:id="@+id/orderChange_btn"
+            android:layout_width="@dimen/order_change_btn_width"
+            android:layout_height="@dimen/order_change_btn_height"
+            android:text="@string/order_change_price"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/order_change_btn_text"
+            android:background="@drawable/shape_order_change_btn"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/order_lines"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <RelativeLayout
+            android:id="@+id/callMerchants_Rl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:src="@mipmap/order_contact_shop" />-->
+
+            <TextView
+                style="@style/order_tv_location"
+                android:layout_gravity="center"
+                android:drawableLeft="@mipmap/order_contact_shop"
+                android:text="@string/order_contect_shop" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/order_lines" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <!--<ImageView-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:src="@mipmap/order_location" />-->
+
+            <TextView
+                android:id="@+id/orderLocation_Tv"
+                style="@style/order_tv_location"
+                android:drawableLeft="@mipmap/order_location"
+                android:text="@string/order_location" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="@color/order_bg"
+        >
+
+        <Button
+            android:id="@+id/orderDetails_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:background="@mipmap/home_blue_round"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="@dimen/home_btn_start_work"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

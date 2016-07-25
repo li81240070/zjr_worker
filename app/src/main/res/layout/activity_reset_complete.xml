@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_view"/>
+
+    <ImageView
+        android:id="@+id/reset_Iv"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@mipmap/reset_complete"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset_psw_complete"
+        android:layout_below="@+id/reset_Iv"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/forget_nextStep_Btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/login_btn_margin"
+        android:layout_marginRight="@dimen/login_btn_margin"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/shape_login_bg"
+        android:text="@string/reset_sure"
+        android:textColor="@color/white"
+        android:textSize="@dimen/login_btn_textsize" />
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="150dp"
+    android:background="#88000000"
+    >
+
+    <LinearLayout
+        android:id="@+id/home_dialog_Ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/shape_home_dialog"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialogTitle_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="更改价格"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/changeOrder_Et"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/shape_change_price_et"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:hint="@string/dialog_modify_price"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textColorHint="@color/material_grey_400"
+            android:textSize="13sp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:inputType="numberDecimal"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/person_content_tv" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_home_dialog"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            >
+
+            <TextView
+                android:id="@+id/cancel_Tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/home_cancel"
+                android:textSize="17sp"
+                android:textColor="@color/withdraw_btn_bg" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/person_content_tv" />
+
+            <TextView
+                android:id="@+id/sure_Tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:text="确认更改"
+                android:textColor="@color/withdraw_btn_bg" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/reset_tb"
+        layout="@layout/toolbar_view" />
+
+    <!--<EditText-->
+        <!--android:id="@+id/resetPswold_Et"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_below="@+id/reset_tb"-->
+        <!--android:layout_margin="15dp"-->
+        <!--android:background="@drawable/selector_change_pwd_edit"-->
+        <!--android:hint="@string/reset_input_old_psw"-->
+        <!--android:inputType="textPassword"-->
+        <!--android:maxLength="16"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:singleLine="true" />-->
+
+    <!--<View-->
+        <!--android:id="@+id/oldlinear1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:focusable="true"-->
+        <!--android:focusableInTouchMode="true"-->
+        <!--android:layout_below="@+id/resetPswold_Et"-->
+        <!--android:background="@color/forget_lines" />-->
+
+    <EditText
+        android:id="@+id/resetPsw_Et"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/reset_tb"
+        android:layout_margin="15dp"
+        android:maxLength="12"
+        android:background="@drawable/selector_change_pwd_edit"
+        android:hint="@string/reset_input_new_psw"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:singleLine="true" />
+
+    <!--<View-->
+        <!--android:id="@+id/lines1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:focusable="true"-->
+        <!--android:focusableInTouchMode="true"-->
+        <!--android:layout_below="@+id/resetPsw_Et"-->
+        <!--android:background="@color/forget_lines" />-->
+
+    <EditText
+        android:id="@+id/resetNewPsw_Et"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/resetPsw_Et"
+        android:layout_margin="15dp"
+        android:maxLength="12"
+        android:background="@drawable/selector_change_pwd_edit"
+        android:hint="@string/reset_input_new_psw_anain"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:singleLine="true" />
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_below="@+id/resetNewPsw_Et"-->
+    <!--android:background="@color/forget_lines" />-->
+
+    <Button
+        android:id="@+id/reset_nextStep_Btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/resetNewPsw_Et"
+        android:layout_margin="15dp"
+        android:background="@drawable/shape_forget_psw_btn"
+        android:text="@string/reset_input_sure"
+        android:textColor="@color/white"
+        android:textSize="@dimen/login_btn_textsize" />
+
+</RelativeLayout>

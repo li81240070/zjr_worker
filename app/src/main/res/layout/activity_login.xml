@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/login_pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/login_Ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_view" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textSize="@dimen/login_tv_title"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/login_obtainPhone_Et"
+            style="@style/login_Et"
+            android:hint="@string/login_number"
+            android:singleLine="true"
+            android:inputType="" />
+
+        <EditText
+            android:id="@+id/login_pbtainPsw_Et"
+            style="@style/login_Et"
+            android:hint="@string/login_psw"
+            android:singleLine="true"
+            android:maxLength="12"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/login_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/login_btn_margin"
+            android:layout_marginRight="@dimen/login_btn_margin"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.07"
+            android:background="@drawable/shape_login_bg"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/login_btn_textsize" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.07"
+            android:orientation="horizontal">
+
+            <!--<CheckBox-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:textColor="@color/login_reset_psw_tv"-->
+            <!--android:text="@string/login_remember_psw"-->
+            <!--/>-->
+
+            <TextView
+                android:id="@+id/login_forget_psw_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/login_checkbox_margin"
+                android:gravity="center"
+                android:text="@string/login_reset_psw"
+                android:textColor="@color/login_reset_psw_tv" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25" />
+
+    </LinearLayout>
+</FrameLayout>

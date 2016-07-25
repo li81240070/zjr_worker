@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_tb"
+        layout="@layout/toolbar_view" />
+
+    <LinearLayout
+        android:id="@+id/phone_number_Ll"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/toolbar_tb"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/forget_phone_number_Et"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/forget_et_margin_left"
+            android:layout_weight="1"
+            android:hint="@string/forget_input_phone_number" />
+
+        <TextView
+            android:id="@+id/forget_obtainCheckcode_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/forget_et_margin_left"
+            android:background="@drawable/shape_forget_obtain_btn"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/forget_obtain_check_code" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/phone_number_Ll"
+        android:background="@color/forget_lines" />
+
+    <LinearLayout
+        android:id="@+id/check_code_Ll"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/phone_number_Ll"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/forget_checkCode_Et"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/forget_et_margin_left"
+            android:layout_weight="1"
+            android:hint="@string/forget_check_code"
+            android:textColor="@color/forget_checkCode_tv" />
+
+        <ImageView
+            android:id="@+id/forget_clearCode_Iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/forget_tv_padding"
+            android:src="@mipmap/forget_cancel_send" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/forget_tv_padding"
+            android:background="@color/forget_tv_lines" />
+
+        <TextView
+            android:id="@+id/forget_reSend_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/forget_et_margin_left"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="一会重发"
+            android:textColor="#d9d9d9"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lines"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/check_code_Ll"
+        android:background="@color/forget_lines" />
+
+    <Button
+        android:id="@+id/forget_nextStep_Btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/login_btn_margin"
+        android:layout_marginRight="@dimen/login_btn_margin"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/shape_login_bg"
+        android:text="@string/forget_next_step_btn"
+        android:textColor="@color/white"
+        android:textSize="@dimen/login_btn_textsize" />
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/toolbar_view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/commit_long_press"
+            android:layout_margin="10dp"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/cancelPhotoBtn"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_send_order_btn"
+            android:text="取消"
+            android:textSize="15sp"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/addPhotoRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

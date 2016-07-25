@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/pay_tb"
+        layout="@layout/toolbar_view" />
+
+    <TextView
+        android:id="@+id/pay_al_Tv"
+        style="@style/pay_tv"
+        android:drawableLeft="@mipmap/pay_ali"
+        android:text="@string/pay_al" />
+
+    <View
+        style="@style/pay_lines"
+        android:layout_below="@+id/pay_al_Tv" />
+
+    <TextView
+        android:id="@+id/pay_wx_Tv"
+        style="@style/pay_tv"
+        android:drawableLeft="@mipmap/pay_wx"
+        android:text="@string/pay_wx" />
+
+    <View
+        style="@style/pay_lines"
+        android:layout_below="@+id/pay_wx_Tv" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/pay_accountMoney_Tv"-->
+        <!--style="@style/pay_tv"-->
+        <!--android:layout_below="@+id/pay_wx_Tv"-->
+        <!--android:drawableLeft="@mipmap/home_world"-->
+        <!--android:text="@string/pay_account_money" />-->
+
+    <!--<View-->
+        <!--style="@style/pay_lines"-->
+        <!--android:layout_below="@+id/pay_accountMoney_Tv" />-->
+
+</LinearLayout>
