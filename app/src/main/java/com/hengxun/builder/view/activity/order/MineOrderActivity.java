@@ -1,16 +1,23 @@
 package com.hengxun.builder.view.activity.order;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Message;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.baidu.mapapi.model.LatLng;
 import com.google.gson.Gson;
@@ -32,6 +39,8 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -57,6 +66,9 @@ public class MineOrderActivity extends BaseActivity {
     private int type = 1;                   // 1 刷新 2 加载
     private int page = 1;
     private int typeMy = 1;
+//////////////////////////////////////////////////
+    private CountDownTimer timer;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +78,42 @@ public class MineOrderActivity extends BaseActivity {
         showToolBar(getResources().getString(R.string.mine_order), true, this);
         initView();
         initData();
+/////////////////////////////////////////////////
+        mediaPlayer = MediaPlayer.create(this,R.raw.music);
+
+//        mediaPlayer.create(this,R.raw.music);
+//        try {
+//            mediaPlayer.prepare();//缓冲
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+        //增加声音选项
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                timer=new CountDownTimer(Integer.MAX_VALUE,1000) {
+//                    @Override
+//                    public void onTick(long millisUntilFinished) {
+//                        dialog = new WaittingDiaolog(MineOrderActivity.this);
+//                        dialog.setCanceledOnTouchOutside(false);
+////                dialog.setMessage("正在加载中...");
+//                        if (dialog != null && !dialog.isShowing()) {
+//                            dialog.show();
+//                        }
+//                        type = 1;
+//                        page = 1;
+//                        typeMy = 1;
+//                        new Thread(orderListTask).start(); // 获取匠人自己的订单列表
+//                    }
+//
+//                    @Override
+//                    public void onFinish() {
+//
+//                    }
+//                }.start();
+//            }
+//        }).start();
+        ///////////////////////////////////////////////
     }
 
     @Override
@@ -168,7 +216,9 @@ public class MineOrderActivity extends BaseActivity {
         dialog.setCanceledOnTouchOutside(false);
 //        dialog.setMessage("正在加载中...");
         if (dialog != null && !dialog.isShowing()) {
+
             dialog.show();
+
         }
 
         new Thread(orderListTask).start(); // 获取匠人自己的订单列表
@@ -352,4 +402,5 @@ public class MineOrderActivity extends BaseActivity {
         super.onDestroy();
         EventBus.getDefault().unregister(this);
     }
+
 }

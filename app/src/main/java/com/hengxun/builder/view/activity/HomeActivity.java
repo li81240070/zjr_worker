@@ -2,15 +2,20 @@ package com.hengxun.builder.view.activity;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.KeyguardManager;
 import android.app.Notification;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Message;
+import android.os.PowerManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
@@ -107,6 +112,10 @@ import cn.jpush.android.api.TagAliasCallback;
 public class HomeActivity extends BaseActivity implements View.OnClickListener, OnGetGeoCoderResultListener {
     public static HomeActivity finishActivity; // 注销销毁的activity
     public static int UPDATEUSER = 20;
+    ///////////////////////////////////
+    //声音播报功能代码
+    private MediaPlayer mediaPlayer;
+    private Context context;
 
     private static boolean ISWORKING = false; // 是否在工作
     private int param;
@@ -154,14 +163,19 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     private boolean type = true;  // 区分是推送订单还是列表订单 true 列表订单 false 推送订单
     private int page = 1;           // 分页加载页码
     private int typeHome = 1;
+    ///////////////////////////////
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        /////////////////////////////////////////////
         finishActivity = this;
         EventBus.getDefault().register(this);
         showToolBar(getResources().getString(R.string.app_name), true, this);
+        ///////////////////////////////////////
+        //声音播报功能代码
+        mediaPlayer=MediaPlayer.create(this,R.raw.music);
 
 //        if (null != LoginActivity.finishActivity) {
 //            LoginActivity.finishActivity.finish();
@@ -1724,6 +1738,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(final OrderPush orderPush) {
+
         switch (orderPush.getDataMap().getOrder_status()) {
             case 0: // 取消
                 final AlertDialog.Builder cancel = new AlertDialog.Builder(HomeActivity.this);
@@ -1741,6 +1756,11 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
                 break;
 
             case 1: // 新订单
+                typeHome = 1;
+                page = 1;
+                new Thread(orderListTask).start();
+////////////////////////////////////////////////////////////
+                ///////////////////////////////////////
                 WindowManager wm = getWindowManager();
                 int wid = wm.getDefaultDisplay().getWidth();
                 int hei = wm.getDefaultDisplay().getHeight();
@@ -1763,8 +1783,11 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
                 orderPushDialog.setOnShowListener(showListener);
                 orderPushDialog.setOnDismissListener(dismissListener);
                 if (orderPushDialog != null && !orderPushDialog.isShowing()) {
+
                     JPushInterface.clearNotificationById(HomeActivity.this, orderPush.getNotifactionId());
+                    //////////////////////////////
                     orderPushDialog.show();
+
                 }
                 orderPushDialog.setOnOrderClickListener(new OrderPushDialog.OnOrderClickListener() {
                     @Override
@@ -1904,5 +1927,21 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
             mLocationClient.stop();
         }
 //        JPushInterface.setAliasAndTags(HomeActivity.this, "", notWorktags, mAliasCallback);
+    }
+
+    //唤醒屏幕
+    private void changeScreen(){
+        KeyguardManager km= (KeyguardManager) HomeActivity.this.getSystemService(Context.KEYGUARD_SERVICE);
+        KeyguardManager.KeyguardLock kl = km.newKeyguardLock("unLock");
+        //解锁
+        kl.disableKeyguard();
+        //获取电源管理器对象
+        PowerManager pm=(PowerManager) HomeActivity.this.getSystemService(Context.POWER_SERVICE);
+        //获取PowerManager.WakeLock对象,后面的参数|表示同时传入两个值,最后的是LogCat里用的Tag
+        PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP | PowerManager.SCREEN_DIM_WAKE_LOCK,"bright");
+        //点亮屏幕
+        wl.acquire();
+        //释放
+        wl.release();
     }
 }

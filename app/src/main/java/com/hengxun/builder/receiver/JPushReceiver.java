@@ -1,11 +1,14 @@
 package com.hengxun.builder.receiver;
 
+import android.app.KeyguardManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.PowerManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
@@ -48,11 +51,30 @@ public class JPushReceiver extends BroadcastReceiver {
     private int workerId;   // 匠人id 用于跟订单id比对
     private int typeId;     // 1正常 22派单 110抢险抢修
     private OrderPushDialog orderPushDialog;
+    //////////////////////////////////
+    private MediaPlayer mediaPlayer;
 
     @Override
     public void onReceive(final Context context, Intent intent) {
         Bundle bundle = intent.getExtras();
         this.context = context;
+        //////////////////////////////////////////
+        mediaPlayer=MediaPlayer.create(context,R.raw.music);
+        //亮屏幕
+        KeyguardManager km= (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
+        KeyguardManager.KeyguardLock kl = km.newKeyguardLock("unLock");
+        //解锁
+        kl.disableKeyguard();
+        //获取电源管理器对象
+        PowerManager pm=(PowerManager) context.getSystemService(Context.POWER_SERVICE);
+        //获取PowerManager.WakeLock对象,后面的参数|表示同时传入两个值,最后的是LogCat里用的Tag
+        PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP | PowerManager.SCREEN_DIM_WAKE_LOCK,"bright");
+        //点亮屏幕
+        wl.acquire();
+        //释放
+        wl.release();
+
+        ///////////////////////////////////////////
 
         if (JPushInterface.ACTION_REGISTRATION_ID.equals(intent.getAction())) {
             String regId = bundle.getString(JPushInterface.EXTRA_REGISTRATION_ID);
@@ -86,6 +108,11 @@ public class JPushReceiver extends BroadcastReceiver {
                 jsonObject = new JSONObject(pushMsg);
                 orderId = jsonObject.getInt("orderId");
                 typeId = jsonObject.getInt("typeId");
+                //////////////////////////////////////
+                if (typeId == 1){
+                    mediaPlayer.start();
+                }
+                /////////////////////////////////////////
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -100,6 +127,7 @@ public class JPushReceiver extends BroadcastReceiver {
             boolean isrunning = Foreground.get().isForeground();
             notifactionId = bundle.getInt(JPushInterface.EXTRA_NOTIFICATION_ID);
             if (isrunning) {
+
                 if (typeId == 0  // 取消
                         || typeId == 1  // 可接单
 //                        || typeId == 2  // 已接单
