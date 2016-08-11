@@ -1608,6 +1608,9 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
     protected void onRestart() {
         super.onRestart();
         new Thread(loginTask).start();
+        typeHome = 1;
+        page = 1;
+        new Thread(orderListTask).start();
     }
 
     /**
@@ -1944,4 +1947,5 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         //释放
         wl.release();
     }
+
 }
